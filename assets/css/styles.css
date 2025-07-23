@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:wdth@75..100&display=swap');
+
+:root {
+    --menu-color: rgba(255, 255, 255, 0.233);
+    --button-color: rgba(199, 159, 159, 0.596);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/fundo.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.button-link {
+    font-size: 1.2em; /* Tamanho do botão um pouco menor e relativo */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: auto;   
+}

@@ -1,0 +1,97 @@
+.center {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* os filhos ficam de maneira vertical */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--menu-color);
+}
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+
+.mainConverter {
+    width: 100%;
+    height: 100%;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+    gap: 20px;
+}
+
+.left, .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.centerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#invertTime {
+    width: 40%;
+    height: 55px;
+    background-color: var(--button-color);
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#convertTime {
+    width: 100%;
+    height: 30px;
+    background-color: var(--button-color);
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 12px;
+}
+
+select {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.315);
+    padding: 7px;
+    border-radius: 8px;
+}
+
+input, .timeOutput {
+    width: 400px;
+    height: 70px;
+    background-color: white; 
+    font-size: 20px;    
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+    padding: 4px;
+} 
+
+.timeOutput {
+    display: flex;
+    align-items: center;
+}

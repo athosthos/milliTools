@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/rules.css">
+</head>
+<body>
+    <div class="center">
+        <div class="menu">
+            <a href="menu.html" class="button-link">Menu Principal</a>
+        </div>
+        <div class="content">
+            <div class="left">
+                <form id="formCreateRules">
+                    <div class="radios">
+                        <label>
+                            <input type="radio" name="globalOrientacao" value="horizontal" checked>
+                            Tabela horizontal
+                        </label>
+                        <label>
+                            <input type="radio" name="globalOrientacao" value="vertical">
+                            Tabela vertical
+                        </label>
+                        <label>
+                            <input type="radio" name="globalOrientacao" value="noTable">
+                            Sem tabela
+                        </label>
+                    </div>
+
+                    <div class="createRules" id="rule-block-initial">
+                        <div class="description">
+                            <div class="inputs">
+                                <input type="text" class="titleInput" id="inputNameGeneralRule-initial" placeholder="Digite o título."></input>
+                                <textarea id="inputDescriptionGeneralRule-initial" class="descInput" placeholder="Digite a regra."></textarea>
+                            </div>
+                            <div class="checkbox-container"> 
+                                <label> 
+                                    <input type="checkbox" class="mainRuleCheckbox" id="mainRule-Initial">Regra Principal
+                                </label>
+                            </div>
+                            <div class="buttons">
+                                <button type="button" class="button-add">+</button>
+                                <button type="button" class="button-del">🗑</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="submit">
+                <button type="submit" id="convert-button1">Converter</button>
+            </div>
+            <div class="right">
+                <textarea class="outputHTML"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/rules.js"></script>
+</body>
+</html>

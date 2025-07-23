@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millisecond</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/timeConverter.css">
+</head>
+<body>
+    <div class="center">
+        <div class="menu">
+            <a href="menu.html" class="button-link">Menu Principal</a>
+        </div>
+        <div class="mainConverter">
+            <form class="form" id="formTimeCoverter">
+                <div class="full">
+                    <div class="left">
+                        <div class="inputLeft">
+                            <label for="timeSelecionLeft">Selecione o tipo de data: </label>
+                            <select id="timeSelecionLeft" name="timeSelecionLeft">
+                                <option value="">Selecione</option>
+                                <option value="decade">Década</option>
+                                <option value="year">Ano</option>
+                                <option value="month">Mês</option>
+                                <option value="week">Semana</option>
+                                <option value="day">Dia</option>
+                                <option value="hour">Hora</option>
+                                <option value="minute">Minuto</option>
+                                <option value="second">Segundo</option>
+                                <option value="millisecond">Milissegundo</option>
+                            </select>
+                        </div>
+                        <div class="inputLeft">
+                            <input type="number" id="timeInput" placeholder="Digite um valor"/>
+                        </div>
+                    </div>
+                    <div class="centerForm">
+                        <button type="button" id="invertTime">⇄</button>
+                        <button type="submit" id="convertTime">Converter</button>
+                    </div>
+                    <div class="right">
+                        <div class="inputRight">
+                            <label for="timeSelecionRight">Selecione o tipo de data: </label>
+                            <select id="timeSelecionRight" name="timeSelecionRight">
+                                <option value="">Selecione</option>
+                                <option value="decade">Década</option>
+                                <option value="year">Ano</option>
+                                <option value="month">Mês</option>
+                                <option value="week">Semana</option>
+                                <option value="day">Dia</option>
+                                <option value="hour">Hora</option>
+                                <option value="minute">Minuto</option>
+                                <option value="second">Segundo</option>
+                                <option value="millisecond">Milissegundo</option>
+                            </select>
+                        </div>
+                        <div class="outputRight">
+                            <div class="timeOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./assets/js/timeConverter.js"></script>
+</body>
+</html>

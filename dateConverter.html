@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millisecond</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/dateConverter.css">
+
+</head>
+<body>
+    <div class="center">
+        <div class="menu">
+            <a href="menu.html" class="button-link">Menu Principal</a>
+        </div>
+        <div class="content-date">
+
+            <div class="left-date">
+                <h1>Conversor de Data para Milissegundos</h1>
+                <form id="dateConverterForm">
+                    <div class="input-date">
+                        <div class="date-input1">
+                            <label for="dateInput1">Data Início</label>
+                            <input type="datetime-local" id="dateInput1">
+                        </div>
+                        <div class="date-input2">
+                            <label for="dateInput2">Data Fim</label>
+                            <input type="datetime-local" id="dateInput2">                    
+                        </div>
+                    </div>
+                    <button type="submit" id="convert-button1">Converter</button>
+                </form>
+                <div class="output-mili"></div>
+            </div>
+
+            <div class="right-date">
+                <h1>Conversor de Milissegundos para Data</h1>
+                <form id="millisecondsConverterForm">
+                    <div class="input-mili">
+                        <input type="number" id="millisecondsInput" placeholder="Insira os milissegundos">
+                        <button type="submit" id="convert-button2">Converter</button>
+                    </div>
+                </form>
+                <div class="output-date">
+            </div>
+
+        </div>
+    </div>
+    <script src="./assets/js/dateToMilli.js"></script>
+    <script src="./assets/js/milliToDate.js"></script>
+</body>
+</html>
