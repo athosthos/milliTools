@@ -1,4 +1,5 @@
 Web Productivity Tools:
+
 This project is a collection of productivity tools developed for internal use, with the goal of optimizing and streamlining our team's daily tasks. Built entirely with front-end technologies, this project showcases the power and flexibility of pure HTML, CSS, and JavaScript, without the use of external libraries or frameworks.
 
 The tools included are:
@@ -12,7 +13,8 @@ Converts a Unix Timestamp into a human-readable date and time format. This tool 
 3. HTML Rule Generator
 Creates HTML rule blocks, ready to be inserted into the help block sections of the dashboards we develop. This tool standardizes and simplifies the creation of internal documentation, ensuring consistency and clarity.
 
-Technologies Used
+Technologies Used:
+
 HTML: Structure and markup for all pages.
 
 CSS: Styling and layout, ensuring a clear and intuitive interface.
