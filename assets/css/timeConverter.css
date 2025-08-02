@@ -2,7 +2,7 @@
     width: 70%;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* os filhos ficam de maneira vertical */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     background-color: var(--menu-color);
@@ -94,4 +94,115 @@ input, .timeOutput {
 .timeOutput {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 1400px) {
+    .center {
+        width: 90%; 
+        padding: 15px;
+    }
+
+    .full {
+        
+        grid-template-columns: 1fr;
+        gap: 30px; 
+    }
+
+    .left, .right {
+        
+        width: 100%;
+        padding: 0 10px; 
+    }
+
+    .centerForm {
+        flex-direction: row; 
+        gap: 20px; 
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px; 
+    }
+
+    #invertTime, #convertTime {
+        width: 48%; 
+        height: 45px;
+        font-size: 25px; 
+    }
+
+    #convertTime {
+        font-size: 18px; 
+    }
+
+    label {
+        font-size: 16px; 
+        margin-bottom: 8px;
+        margin-right: 0; 
+        text-align: center; 
+        width: 100%;
+    }
+
+    select, input, .timeOutput {
+        width: 90%; 
+        font-size: 18px; 
+        margin-top: 15px; 
+        box-sizing: border-box; 
+    }
+
+    .inputLeft, .inputRight {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .outputRight {
+        width: 90%;
+    }
+
+    .timeOutput {
+        height: 60px; 
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .center {
+        width: 95%; 
+        padding: 10px;
+    }
+
+    .full {
+        gap: 20px; 
+    }
+
+    .centerForm {
+        flex-direction: column; 
+        gap: 15px; 
+        margin-top: 15px;
+    }
+
+    #invertTime, #convertTime {
+        width: 80%; 
+        height: 40px;
+        font-size: 20px; 
+    }
+
+    #convertTime {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 14px; 
+        margin-bottom: 5px;
+    }
+
+    .outputRight {
+        width: 90%;
+    }
+
+    select, input, .timeOutput {
+        width: 95%; 
+        font-size: 16px; 
+        height: 50px; 
+        margin-top: 10px;
+    }
 }

@@ -26,23 +26,24 @@
     align-items: flex-start; 
 }
 
-.content-date h1 {
-    font-size: clamp(1.8em, 3vw, 2.5em); 
-    text-align: center;
-    margin-bottom: 40px; 
-    width: 100%; 
-}
-
 .left-date, .right-date {
     width: 100%; 
     padding: 20px; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    justify-content: center; 
     border-radius: 8px;
     flex: 1 1 48%; 
     min-width: 300px; 
+}
+
+.content-date h1 {
+    font-size: clamp(1.8em, 3vw, 2.5em); 
+    text-align: center;
+    margin-bottom: 40px; 
+    width: 100%; 
 }
 
 .input-date {
@@ -63,15 +64,7 @@
     margin: 0; 
 }
 
-label {
-    font-size: 0.9em; 
-    padding: 5px 8px; 
-    width: auto; 
-    text-align: left; 
-}
-
 #dateInput1, #dateInput2, #millisecondsInput {
-    margin-top: 5px; 
     padding: 12px 15px; 
     font-size: 1em; 
     border-radius: 5px; 
@@ -84,22 +77,36 @@ label {
 }
 
 #convert-button1, #convert-button2 {
-    width: 120px; 
-    height: 40px; 
-    font-size: 1em; 
-    border-radius: 15px;
-    background-color: var(--menu-color);
-    transition: background-color 0.1s ease; 
+    width: 100px;
+    height: 30px;
+    background-color: var(--button-color);
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 8px;
 }
 
-#convert-button1:hover, #convert-button2:hover {
-    background-color: rgba(51, 43, 43, 0.8); 
-    color: white;
+#millisecondsConverterForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.output-mili, .output-date {
+.input-mili {
+    width: 70%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.output-mili {
     background-color: #f8f8f8; 
-    border: 1px solid #ddd; 
     width: 90%; 
     min-height: 60px; 
     display: flex; 
@@ -109,48 +116,76 @@ label {
     font-size: 1.1em; 
     word-wrap: break-word; 
     text-align: center; 
-    margin-top: 30px; 
     border-radius: 5px;
     color: #333; 
 }
 
-@media (max-width: 992px) {
+.output-date {
+    background-color: #f8f8f8; 
+    width: 90%; 
+    min-height: 60px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding: 10px; 
+    font-size: 1.1em; 
+    word-wrap: break-word; 
+    text-align: center; 
+    border-radius: 5px;
+    color: #333; 
+}
+
+@media (max-width: 1300px) {
+    .input-date {
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px; 
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
     .center {
-        /* Permite que a altura seja automática e se ajuste ao conteúdo */
         height: auto;
         max-height: unset;
-        /* Garante que o container ocupe pelo menos a altura da tela, evitando overflow inicial */
-        /* Alinha o conteúdo ao topo para o botão "Menu Principal" não sumir */
         justify-content: flex-start;
         padding: 20px;
     }
 
     .content-date {
-        flex-direction: column; /* Empilha os blocos de conversão */
-        gap: 20px; /* Mantém um bom espaçamento entre os blocos empilhados */
+        flex-direction: column; 
+        gap: 20px;
     }
 
-    .left-date,
-    .right-date {
-        flex: 1 1 100%; /* Cada bloco ocupa a largura total */
-        min-width: unset; /* Remove a largura mínima */
-        padding: 20px; /* Ajusta o padding */
+    .left-date, .right-date {
+        min-width: unset; 
+        padding: 20px; 
     }
 
     .content-date h1 {
         font-size: clamp(1.6em, 2.5vw, 2.2em);
-        margin-bottom: 25px; /* Reduz a margem inferior do título */
+        margin-bottom: 25px; 
+    }
+
+    #dateConverterForm {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
 
     .input-date {
-        flex-direction: column; /* Empilha os campos de data */
-        gap: 10px; /* Espaçamento entre os campos */
+        width: 100%;
+        display: flex; 
+        flex-direction: row;
+        flex-wrap: wrap; 
+        gap: 10px; 
         margin-bottom: 20px;
     }
 
     .date-input1,
     .date-input2 {
-        max-width: 100%; /* Ocupa a largura total */
+        max-width: 40%; 
     }
 
     #dateInput1,
@@ -162,85 +197,84 @@ label {
 
     #convert-button1,
     #convert-button2 {
-        width: 100%; /* Faz o botão ocupar a largura total do seu container */
-        max-width: 150px; /* Limita a largura máxima para não ficar gigante */
+        width: 100%; 
+        max-width: 150px; 
         height: 40px;
         font-size: 1em;
     }
 
     .output-mili,
     .output-date {
-        width: 90%; /* Mantém uma boa largura */
+        width: 90%; 
         min-height: 60px;
         font-size: 1em;
-        margin-top: 20px;
-        display: flex; /* Garante visibilidade */
+        display: flex; 
+    }
+
+    .input-mili {
+        margin-bottom: 20px;
     }
 }
 
-/* Para telas pequenas (smartphones), com largura máxima de 740px */
-/* Esta media query agora cobre o que antes era 576px e onde o problema ocorre */
 @media (max-width: 740px) {
     .center {
-        width: 100%; /* Ocupa a largura total */
-        padding: 10px; /* Reduz o padding geral */
-        height: auto;
-        max-height: unset;
-        min-height: 100vh;
+        width: 100%; 
+        padding: 10px; 
         justify-content: flex-start;
     }
 
     .menu {
-        margin-bottom: 10px; /* Reduz a margem do menu */
+        margin-bottom: 10px; 
     }
 
     .menu .button-link {
-        font-size: 0.9em; /* Tamanho da fonte do botão do menu */
+        font-size: 0.9em; 
         padding: 6px 12px;
     }
 
     .content-date h1 {
-        font-size: 1.2em; /* Tamanho do título para telas muito pequenas */
+        font-size: 1.2em; 
         margin-bottom: 15px;
     }
 
     .left-date,
     .right-date {
-        padding: 10px; /* Reduz o padding das caixas de conversão */
-        gap: 10px; /* Espaçamento entre os elementos dentro da caixa */
+        padding: 10px; 
+        gap: 10px; 
     }
 
     .input-date {
-        gap: 8px; /* Reduz o espaçamento entre os inputs */
+        flex-direction: column;
+        gap: 8px; 
         margin-bottom: 15px;
     }
 
     #dateInput1,
     #dateInput2,
     #millisecondsInput {
-        padding: 6px 8px; /* Padding menor para os inputs */
-        font-size: 0.85em; /* Tamanho da fonte menor para os inputs */
+        padding: 6px 8px; 
+        font-size: 0.85em; 
     }
 
     #convert-button1,
     #convert-button2 {
-        width: 100%; /* Garante que os botões se ajustem */
-        max-width: 120px; /* Limita a largura máxima */
-        height: 30px; /* Altura menor para os botões */
-        font-size: 0.8em; /* Tamanho da fonte menor para os botões */
+        width: 100%; 
+        max-width: 120px; 
+        height: 30px; 
+        font-size: 0.8em; 
     }
 
     .output-mili,
     .output-date {
-        width: 95%; /* Quase largura total para o output */
-        min-height: 40px; /* Altura mínima menor */
-        font-size: 0.8em; /* Tamanho da fonte menor para o output */
+        width: 95%; 
+        min-height: 40px; 
+        font-size: 0.8em; 
         margin-top: 15px;
         display: flex;
     }
 
     label {
-        font-size: 0.75em; /* Tamanho da fonte da label ajustado */
-        padding: 2px 5px; /* Padding menor para a label */
+        font-size: 0.75em; 
+        padding: 2px 5px; 
     }
 }

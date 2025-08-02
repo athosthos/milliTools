@@ -184,7 +184,6 @@ ${mainRulesContent}
         renderOutput();
     });
 
-    // --- Lógica para mostrar/esconder o checkbox e redefinir a mainRule ---
     form.addEventListener('change', (event) => {
         const target = event.target;
 
@@ -195,9 +194,9 @@ ${mainRulesContent}
 
             allCheckboxContainers.forEach(container => {
                 if (isNoTableMode) {
-                    container.style.display = 'none'; // Esconde o container do checkbox
+                    container.style.display = 'none'; 
                 } else {
-                    container.style.display = ''; // Mostra o container (usa o padrão do CSS)
+                    container.style.display = ''; 
                 }
             });
 
@@ -244,7 +243,17 @@ ${mainRulesContent}
 
             const currentRuleBlock = target.closest('.createRules');
             if (currentRuleBlock) {
-                currentRuleBlock.insertAdjacentHTML('afterend', htmlToInsert);
+                const newDiv = document.createElement('div');
+                newDiv.innerHTML = htmlToInsert.trim();
+                const newRuleBlock = newDiv.firstChild;
+
+                currentRuleBlock.insertAdjacentElement('afterend', newRuleBlock);
+
+                newRuleBlock.scrollIntoView({
+                    behavior: 'smooth', 
+                    block: 'end'        
+                });
+            
             } else {
                 const leftDiv = document.querySelector('.left');
                 if (leftDiv) {
